@@ -1,0 +1,27 @@
+{
+    "name": "cw/env-test",
+    "description": "koriym/env-json の簡易な動作確認をするだけのリポジトリ",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "clap-and-whistle",
+            "email": "kimita@clap-and-whistle.page"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cw\\EnvTest\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cw\\EnvTest\\": "tests/"
+        }
+    }
+}
