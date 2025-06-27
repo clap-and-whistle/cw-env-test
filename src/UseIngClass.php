@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Cw\EnvTest;
 
+use Koriym\EnvJson\EnvJson;
 use stdClass;
 
 class UseIngClass
@@ -12,7 +13,8 @@ class UseIngClass
 
     public function __construct()
     {
-        $this->object = new stdClass();
+        $envJson = new EnvJson();
+        $this->object = $envJson->load(dirname(__DIR__));
     }
 
     /**

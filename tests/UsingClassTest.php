@@ -11,7 +11,8 @@ class UsingClassTest extends TestCase
     public function test(): void
     {
         $target = new UseIngClass();
+        $target = $target->getArray();
 
-        $this->assertEmpty($target->getArray());
+        $this->assertArrayHasKey('HOGE_STRING', $target);
     }
 }
