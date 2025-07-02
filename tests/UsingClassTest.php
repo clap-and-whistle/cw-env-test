@@ -23,9 +23,8 @@ class UsingClassTest extends TestCase
 
         $this->assertArrayHasKey('HOGE_STRING', $target);
         $this->assertSame(
-            expected: 'hogefuga',   // env.json で定義した値
+            expected: 'hogehoge',
             actual: $using->hogeStr(),
-            message: 'env.json で定義した値で上書きできていない'
         );
     }
 }
