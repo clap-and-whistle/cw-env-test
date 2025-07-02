@@ -15,7 +15,11 @@ class UsingClassTest extends TestCase
 
         $this->assertArrayHasKey('HOGE_INTEGER', $target);
         $this->assertIsString($target['HOGE_INTEGER']);
-        $this->assertSame(2035, $using->hogeInt());
+        $this->assertSame(
+            expected: 2025,
+            actual: $using->hogeInt(),
+            message: 'env.json で定義した値で上書きできていない',
+        );
 
         $this->assertArrayHasKey('DEBUG_MODE', $target);
         $this->assertIsString($target['DEBUG_MODE']);
