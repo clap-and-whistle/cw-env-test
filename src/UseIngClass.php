@@ -24,4 +24,19 @@ class UseIngClass
     {
         return (array) $this->object;
     }
+
+    public function hogeStr(): string
+    {
+        return $this->object->HOGE_STRING;
+    }
+
+    public function hogeInt(): int
+    {
+        return (int) $this->object->HOGE_INTEGER;
+    }
+
+    public function debugMode(): bool
+    {
+        return $this->object->DEBUG_MODE === 'true';
+    }
 }
