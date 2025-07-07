@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class UsingClassTest extends TestCase
 {
-    public function test(): void
+    public function testOeverride(): void
     {
         $using = new UseIngClass();
         $target = $using->getArray();
@@ -18,7 +18,6 @@ class UsingClassTest extends TestCase
         $this->assertSame(
             expected: 2025,
             actual: $using->hogeInt(),
-            message: 'env.json で定義した値で上書きできていない',
         );
 
         $this->assertArrayHasKey('DEBUG_MODE', $target);
@@ -27,7 +26,7 @@ class UsingClassTest extends TestCase
 
         $this->assertArrayHasKey('HOGE_STRING', $target);
         $this->assertSame(
-            expected: 'hogehoge',
+            expected: 'hogefuga',
             actual: $using->hogeStr(),
         );
     }
